@@ -1,0 +1,107 @@
+{
+	"info": {
+		"_postman_id": "49935f05-30c9-4bbd-8b3f-d1fe247b76ab",
+		"name": "Mental Health",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27892686"
+	},
+	"item": [
+		{
+			"name": "generate_session",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000//generate_session",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"",
+						"generate_session"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Generate Questions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/generate_questions/<session_id>",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"generate_questions",
+						"<session_id>"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"question\": \"How do you differentiate between healthy and unhealthy relationships?\", \"answer\": \"Discerning between healthy and unhealthy relationships is a challenge. It often feels like I attract more toxicity than positivity.\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/store_qa/<session_id>",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"store_qa",
+						"<session_id>"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Predict",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"answer\": \"I can't say I've achieved much worth reflecting on. Life has been rather unremarkable.\",\r\n        \"question\": \"Are there past achievements that you're proud of and reflect on?\"\r\n    },\r\n    {\r\n        \"answer\": \"Hope and optimism? Frankly, I find it hard to believe things will get better. The future seems bleak to me.\",\r\n        \"question\": \"How do you maintain a sense of hope and optimism for the future?\"\r\n    },\r\n    {\r\n        \"answer\": \"Recharge? I'm not sure there's anything that truly rejuvenates me. Tough times just seem to drag on endlessly.\",\r\n        \"question\": \"What steps do you take to recharge and rejuvenate during tough times?\"\r\n    },\r\n    {\r\n        \"answer\": \"Communication has never been my strong suit. Misunderstandings and conflicts seem to follow me everywhere.\",\r\n        \"question\": \"How well do you feel you communicate with others?\"\r\n    },\r\n    {\r\n        \"answer\": \"Uncertainty is a constant companion. I've grown used to the idea that things will probably not go the way I hope.\",\r\n        \"question\": \"How do you handle periods of uncertainty about the future?\"\r\n    },\r\n    {\r\n        \"answer\": \"Plenty of unresolved issues haunt my past, and they continue to cast a shadow over my present. It's hard to escape them.\",\r\n        \"question\": \"Are there any unresolved issues from your past that still affect you?\"\r\n    },\r\n    {\r\n        \"answer\": \"My needs and desires often go unmet, contributing to a pervasive sense of dissatisfaction and discontent.\",\r\n        \"question\": \"Are there any unmet needs or desires that impact your well-being?\"\r\n    },\r\n    {\r\n        \"answer\": \"Life changes and stressors seem to be the only constants. It's been one thing after another, and none of it has been positive.\",\r\n        \"question\": \"Have you experienced any significant life changes or stressors recently?\"\r\n    },\r\n    {\r\n        \"answer\": \"Identity struggles? I can't say I celebrate much about myself. There's a constant internal conflict that I can't seem to resolve.\",\r\n        \"question\": \"Are there aspects of your identity that you struggle with or celebrate?\"\r\n    },\r\n    {\r\n        \"answer\": \"Discerning between healthy and unhealthy relationships is a challenge. It often feels like I attract more toxicity than positivity.\",\r\n        \"question\": \"How do you differentiate between healthy and unhealthy relationships?\"\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/predict",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"predict"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

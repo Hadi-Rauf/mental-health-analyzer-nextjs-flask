@@ -1,0 +1,77 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+    border-radius: 8px;
+}
+
+h1 {
+    color: #333;
+}
+
+#questionContainer {
+    margin-top: 20px;
+}
+
+#questionOutput {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#questionCount {
+    color: #555;
+}
+
+#answerInput {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    resize: none; /* Prevent resizing */
+    overflow: hidden; /* Hide scrollbar */
+    transition: height 0.3s ease; /* Smooth transition */
+}
+
+#answerInput:focus {
+    outline: none; /* Remove focus outline */
+    border-color: #4caf50; /* Highlight border on focus */
+}
+#nextQuestionBtn, #stopChatBtn {
+    padding: 12px 20px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#nextQuestionBtn:hover, #stopChatBtn:hover {
+    background-color: #45a049;
+}
+
+#predictionOutput {
+    margin-top: 20px;
+    font-size: 16px;
+    display: none;
+}
+
+#predictionOutput a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+#predictionOutput a:hover {
+    text-decoration: underline;
+}
